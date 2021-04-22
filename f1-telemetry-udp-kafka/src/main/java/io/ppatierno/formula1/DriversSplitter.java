@@ -31,7 +31,9 @@ public class DriversSplitter {
     public List<Driver> splitDrivers(List<Packet> packets) {
         // gets the all packets within same frame (same frame id)
         // so that we can update all drivers info (motion, lap, ...) in one step
+    	System.out.println("driver NPE packet1>"+ packets.toString());
         for (Packet packet : packets) {
+        	System.out.println("driver NPE packet2>"+ packet.getHeader().getPacketId().toString());
             switch (packet.getHeader().getPacketId()) {
                 case MOTION:
                     this.session.updateMotion((PacketMotionData) packet);

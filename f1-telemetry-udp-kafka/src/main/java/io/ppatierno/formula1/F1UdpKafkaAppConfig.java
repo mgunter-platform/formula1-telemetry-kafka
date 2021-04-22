@@ -14,7 +14,7 @@ public class F1UdpKafkaAppConfig {
     private static final String F1_EVENTS_TOPIC_ENV = "F1_EVENTS_TOPIC";
     private static final String F1_RAW_PACKETS_TOPIC_ENV = "F1_RAW_PACKETS_TOPIC";
 
-    private static final String DEFAULT_KAFKA_BOOTSTRAP_SERVERS = "localhost:9092";
+    private static final String DEFAULT_KAFKA_BOOTSTRAP_SERVERS = "kafka-service:31234";
     private static final int DEFAULT_UDP_PORT = 20777;
     private static final String DEFAULT_F1_DRIVERS_TOPIC = "f1-telemetry-drivers";
     private static final String DEFAULT_F1_EVENTS_TOPIC = "f1-telemetry-events";

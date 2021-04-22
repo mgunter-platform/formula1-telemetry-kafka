@@ -25,7 +25,7 @@ public class RawPacketsRouteBuilder extends RouteBuilder {
                 .withTruststoreLocation(this.config.getKafkaTruststoreLocation())
                 .withTruststorePassword(this.config.getKafkaTruststorePassword())
                 .build();
-        log.info("KafkaEndpoint = {}", this.kafkaEndpoint);
+        log.info("KafkaEndpoint = {}", this.kafkaEndpoint); 
     }
 
     @Override

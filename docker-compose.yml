@@ -52,4 +52,9 @@ services:
     image: grafana/grafana:7.0.3
     ports:
       - 3000:3000
-    user: "104"    
+    user: "104" 
+
+  magic:
+    image: digitsy/kafka-magic
+    ports:
+      - 8080:80    

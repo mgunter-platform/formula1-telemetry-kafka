@@ -39,13 +39,16 @@ public class Session {
     }
 
     public void updateDrivers(PacketParticipantsData packetParticipantsData) {
+    	//System.out.println("before:" + this.drivers.toString());
         if (this.drivers == null) {
             this.drivers = new ArrayList<>(packetParticipantsData.getNumActiveCars());
             for (ParticipantData pd : packetParticipantsData.getParticipants()) {
+            	System.out.println(pd.toString());
                 Driver driver = new Driver(pd);
                 this.drivers.add(driver);
             }
         }
+        System.out.println("after:" + this.drivers.toString());
         // TODO: what happens when it's not the first PacketPartecipantsData? should we updated the drivers?
     }
 
@@ -53,6 +56,8 @@ public class Session {
         if (this.drivers != null && !this.drivers.isEmpty()) {
             for (int i = 0; i < this.drivers.size(); i++) {
                 this.drivers.get(i).setCarMotionData(packetMotionData.getCarMotionData().get(i));
+                if (packetMotionData.getExtraCarMotionData() != null){
+                   this.drivers.get(i).setExtraCarMotionData(packetMotionData.getExtraCarMotionData());
             }
         }
     }

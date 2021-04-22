@@ -28,7 +28,8 @@ public class DriversAvgSpeedPointRouteBuilder extends RouteBuilder {
 
         from("kafka:" + this.config.getF1DriversAvgSpeedTopic() + "?" +
                 "brokers=" + this.config.getKafkaBootstrapServers() +
-                "&valueDeserializer=org.apache.kafka.common.serialization.IntegerDeserializer")
+                "&valueDeserializer=org.apache.kafka.common.serialization.IntegerDeserializer" +
+                "&autoOffsetReset=earliest" )
         .process(exchange -> {
             Integer avgSpeed = (Integer) exchange.getIn().getBody();
 

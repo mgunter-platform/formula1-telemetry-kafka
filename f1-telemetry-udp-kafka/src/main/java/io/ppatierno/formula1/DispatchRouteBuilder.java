@@ -4,6 +4,7 @@
  */
 package io.ppatierno.formula1;
 
+import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;
 
 /**

@@ -4,13 +4,7 @@
  */
 package io.ppatierno.formula1;
 
-import io.ppatierno.formula1.data.CarMotionData;
-import io.ppatierno.formula1.data.CarSetupData;
-import io.ppatierno.formula1.data.CarStatusData;
-import io.ppatierno.formula1.data.CarTelemetryData;
-import io.ppatierno.formula1.data.FinalClassificationData;
-import io.ppatierno.formula1.data.LapData;
-import io.ppatierno.formula1.data.ParticipantData;
+import io.ppatierno.formula1.data.*;
 
 /**
  * Represents a single driver with all related data during a session
@@ -19,6 +13,10 @@ public class Driver {
 
     private ParticipantData participantData;
     private CarMotionData carMotionData;
+
+
+
+    private ExtraCarMotionData extraCarMotionData;
     private LapData lapData;
     private CarSetupData carSetupData;
     private CarTelemetryData carTelemetryData;
@@ -30,11 +28,21 @@ public class Driver {
 
     public Driver(ParticipantData participantData) {
         this.participantData = participantData;
-        String driverId = participantData.getDriverId().name();
+        String driverId = participantData.getDriverId().name(); //
         // build an hashtag as #<first_char_firstname><first_char_lastname><race_number>
         this.hashtag = "#" + driverId.charAt(0) + driverId.charAt(driverId.indexOf("_") + 1) + participantData.getRaceNumber();
         // build a short name using first 3 chars of lastname
         this.shortName = driverId.substring(driverId.indexOf("_") + 1, driverId.indexOf("_") + 4);
+    }
+
+    public Driver(){}
+
+    public ExtraCarMotionData getExtraCarMotionData() {
+        return extraCarMotionData;
+    }
+
+    public void setExtraCarMotionData(ExtraCarMotionData extraCarMotionData) {
+        this.extraCarMotionData = extraCarMotionData;
     }
 
     public ParticipantData getParticipantData() {

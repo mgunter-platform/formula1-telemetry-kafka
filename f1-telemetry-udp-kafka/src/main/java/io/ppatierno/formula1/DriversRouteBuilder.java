@@ -39,7 +39,7 @@ public class DriversRouteBuilder extends RouteBuilder {
                 .withTruststoreLocation(this.config.getKafkaTruststoreLocation())
                 .withTruststorePassword(this.config.getKafkaTruststorePassword())
                 .build();
-        log.info("KafkaEndpoint = {}", this.kafkaEndpoint);
+        log.info("KafkaEndpoint = {}", this.kafkaEndpoint); 
     }
 
     @Override
@@ -81,7 +81,7 @@ public class DriversRouteBuilder extends RouteBuilder {
                     exchange.getIn().setHeader(KafkaConstants.KEY, driver.getParticipantData().getDriverId().name());
                 })
                 .to(this.kafkaEndpoint.toString())
-                .log(LoggingLevel.TRACE, "${body}")
+                .log(LoggingLevel.INFO, "${body}")
                 .log(LoggingLevel.DEBUG, "Driver[id = ${body.participantData.driverId}, hashtag = ${body.hashtag}]");
     }
 }

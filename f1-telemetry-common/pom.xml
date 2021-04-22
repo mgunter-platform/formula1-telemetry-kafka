@@ -20,6 +20,11 @@
       <groupId>org.apache.kafka</groupId>
       <artifactId>kafka-clients</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.esotericsoftware</groupId>
+      <artifactId>kryo</artifactId>
+    <version>4.0.0</version>
+</dependency>
   </dependencies>
 
   <build>

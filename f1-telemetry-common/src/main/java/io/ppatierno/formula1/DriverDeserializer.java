@@ -15,10 +15,11 @@ import io.ppatierno.formula1.data.LapData;
 import io.ppatierno.formula1.data.ParticipantData;
 import org.apache.kafka.common.header.Headers;
 import org.apache.kafka.common.serialization.Deserializer;
+import com.esotericsoftware.kryo.serializers.JavaSerializer;
 
 import java.util.Map;
 
-public class DriverDeserializer implements Deserializer<Driver> {
+public class DriverDeserializer extends JavaSerializer implements Deserializer<Driver> {
     @Override
     public void configure(Map<String, ?> configs, boolean isKey) {
 
