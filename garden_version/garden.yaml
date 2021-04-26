@@ -6,7 +6,7 @@ environments:
 providers:
   - name: local-kubernetes
     environments: [local]
-    context: docker-desktop
+    context: minikube
   - name: kubernetes
     context: gke_th-structure-flow-demo_us-east1-b_stream-demo
     environments: [gke]
