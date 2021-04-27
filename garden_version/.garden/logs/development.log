@@ -10477,3 +10477,81 @@ See error.log for detailed error message
 [2021-04-26T21:40:17.896Z] → Ingress: http://http.local.app.garden
 
 [2021-04-26T21:40:17.912Z] Done! ✔️ 
+
+[2021-04-27T13:10:12.896Z] Getting status...
+
+[2021-04-27T13:10:14.937Z] Unable to enable minikube ingress addon: 
+X Exiting due to MK_USAGE: Due to networking limitations of driver docker on darwin, ingress addon is not supported.
+Alternatively to use this addon you can use a vm-based driver:
+
+	'minikube start --vm=true'
+
+To track the update on this work in progress feature please check:
+https://github.com/kubernetes/minikube/issues/7332
+
+
+[2021-04-27T13:10:16.153Z] Getting status... → Done
+
+[2021-04-27T13:10:16.319Z] Syncing module sources (2 files)...
+
+[2021-04-27T13:10:16.324Z] Syncing module sources (3 files)...
+
+[2021-04-27T13:10:16.328Z] Syncing module sources (1 file)...
+
+[2021-04-27T13:10:16.352Z] Syncing module sources (2 files)... → Done (took 0 sec)
+
+[2021-04-27T13:10:16.358Z] Getting build status for v-e6bc55973a...
+
+[2021-04-27T13:10:16.361Z] Building version v-e6bc55973a...
+
+[2021-04-27T13:10:16.365Z] Syncing module sources (3 files)... → Done (took 0 sec)
+
+[2021-04-27T13:10:16.369Z] Getting build status for v-6d026f712e...
+
+[2021-04-27T13:10:16.372Z] Building version v-6d026f712e...
+
+[2021-04-27T13:10:16.375Z] Syncing module sources (1 file)... → Done (took 0 sec)
+
+[2021-04-27T13:10:16.379Z] Getting build status for v-47a406fd21...
+
+[2021-04-27T13:10:16.407Z] Building version v-e6bc55973a... → Done (took 0.1 sec)
+
+[2021-04-27T13:10:16.427Z] Building version v-6d026f712e... → Done (took 0.1 sec)
+
+[2021-04-27T13:10:16.446Z] Deploying version v-e6bc55973a...
+
+[2021-04-27T13:10:16.449Z] Deploying version v-6d026f712e...
+
+[2021-04-27T13:10:17.378Z] Building version v-47a406fd21...
+
+[2021-04-27T13:10:17.567Z] Building udp-app:v-47a406fd21...
+
+[2021-04-27T13:10:18.303Z] Waiting for resources to be ready...
+
+[2021-04-27T13:10:18.572Z] Waiting for resources to be ready...
+
+[2021-04-27T13:10:20.377Z] Deployment/zookeeper-deploy: Pulling image "digitalwonderland/zookeeper"
+
+[2021-04-27T13:10:20.639Z] Deployment/kafka-broker0: Pulling image "wurstmeister/kafka"
+
+[2021-04-27T13:10:30.246Z] Building udp-app:v-47a406fd21... → Done (took 13.9 sec)
+
+[2021-04-27T13:10:43.759Z] Resources ready
+
+[2021-04-27T13:10:43.823Z] Deploying version v-6d026f712e... → Done (took 27.4 sec)
+
+[2021-04-27T13:10:43.828Z] Deploying version v-47a406fd21...
+
+[2021-04-27T13:10:46.157Z] Waiting for resources to be ready...
+
+[2021-04-27T13:10:48.209Z] Resources ready
+
+[2021-04-27T13:10:48.273Z] Deploying version v-47a406fd21... → Done (took 4.4 sec)
+
+[2021-04-27T13:10:48.280Z] → Ingress: http://http.local.app.garden
+
+[2021-04-27T13:10:55.039Z] Resources ready
+
+[2021-04-27T13:10:55.080Z] Deploying version v-e6bc55973a... → Done (took 38.6 sec)
+
+[2021-04-27T13:10:55.091Z] Done! ✔️ 
